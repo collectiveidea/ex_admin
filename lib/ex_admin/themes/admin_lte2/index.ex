@@ -215,6 +215,16 @@ defmodule ExAdmin.Theme.AdminLte2.Index do
                         "data-confirm": msg
                       )
                     end
+
+                    if name == "monitors" do
+                      li do
+                        a(
+                          ".batch_action " <> gettext("Calibrate"),
+                          href: "#",
+                          "data-action": :calibrate
+                        )
+                      end
+                    end
                   end
                 end
               end
